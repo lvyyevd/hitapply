@@ -1,7 +1,7 @@
 # 常量文件
 
 
-# 连接数据的相关常量
+# 连接数据库的相关常量
 class DatabaseConst:
     MYSQL_USERNAME = 'root'
     MYSQL_PASSWORD = 'xxx'
