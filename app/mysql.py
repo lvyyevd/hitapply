@@ -55,4 +55,4 @@ class Apply(db.Model):
     verifier_name = db.Column(db.String(255))
     building = db.Column(db.String(255))
     floor = db.Column(db.Integer)
-    room_name = db.Column(db.String(255))
+    room_name = db.Column(db.String(255), default="不指定")
