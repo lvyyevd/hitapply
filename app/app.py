@@ -25,7 +25,11 @@ def initdb():
 @app.route('/')
 def hello_world():
     return 'Hello World!'
-
+  
+  
+# 注册所有蓝本的视图函数
+from register import register_all
+register_all(app)
 
 if __name__ == '__main__':
     app.run()
