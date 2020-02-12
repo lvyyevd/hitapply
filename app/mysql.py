@@ -33,7 +33,14 @@ class Room(db.Model):
     permissible = db.Column(db.Boolean, nullable=False)
     description = db.Column(db.Text)
 
+    
+# 时间表
+class Timetable(db.Model):
+    class_id = db.Column(db.Integer, primary_key=True, nullable=False)
+    begin_time = db.Column(db.Integer, nullable=False)
+    end_time = db.Column(db.Integer, nullable=False)    
 
+    
 # 预约信息表
 class Apply(db.Model):
     apply_id = db.Column(db.String(255), primary_key=True, nullable=False)
