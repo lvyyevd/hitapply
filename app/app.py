@@ -15,7 +15,7 @@ db = SQLAlchemy(app)
 
 # 通过命令行 "flask initdb" 创建数据库
 import click
-from mysql import Administrator, Notice, Room, Apply
+from mysql import Administrator, Notice, Room, Apply, Timetable
 @app.cli.command()
 def initdb():
     db.create_all()
