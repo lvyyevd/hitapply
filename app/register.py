@@ -1,5 +1,6 @@
 import stu_apply_info
 import room_use_info
+import room_info
 
 # 注册所有蓝本视图函数
 def register_all(app):
@@ -11,3 +12,7 @@ def register_all(app):
     # http://xx.com/api/stu/room/use/id
     # GET: 教室使用说明
     app.register_blueprint(room_use_info.room_use_info, url_prefix='/api/stu/room/use/<string:room_id>')
+
+    # http://xx.com/api/stu/room/id
+	# GET: 查看教室介绍
+	app.register_blueprint(room_info.room_info, url_prefix='/api/stu/room/<string:room_id>')
