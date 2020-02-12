@@ -14,5 +14,5 @@ def register_all(app):
     app.register_blueprint(room_use_info.room_use_info, url_prefix='/api/stu/room/use/<string:room_id>')
 
     # http://xx.com/api/stu/room/id
-	# GET: 查看教室介绍
-	app.register_blueprint(room_info.room_info, url_prefix='/api/stu/room/<string:room_id>')
+    # GET: 查看教室介绍
+    app.register_blueprint(room_info.room_info, url_prefix='/api/stu/room/<string:room_id>')
