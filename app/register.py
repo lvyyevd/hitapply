@@ -8,7 +8,7 @@ def register_all(app):
     # http://xx.com/stu/apply/id
     # GET：我的申请详细内容
     # POST：修改申请内容
-    app.register_blueprint(stu_apply_info.stu_apply_info, url_prefix='api/stu/apply/<string:apply_id>')
+    app.register_blueprint(stu_apply_info.stu_apply_info, url_prefix='/api/stu/apply/<string:apply_id>')
 
     # http://xx.com/api/stu/room/use/id
     # GET: 教室使用说明
@@ -20,4 +20,4 @@ def register_all(app):
 	
     # http://xx.com/stu/room/use
     # GET: 教室使用情况
-    app.register_blueprint(stu_room_use.stu_room_use, url_prefix='api/stu/room/use')
+    app.register_blueprint(stu_room_use.stu_room_use, url_prefix='/api/stu/room/use')
