@@ -2,7 +2,7 @@ import stu_apply_info
 import room_use_info
 import room_info
 import stu_room_use
-import room_number_get
+import room_floor_get
 
 
 # 注册所有蓝本视图函数
@@ -26,4 +26,4 @@ def register_all(app):
 
     # http://xx.com/api/stu/building
     # GET: 获取全部楼号
-    app.register_blueprint(room_number_get.room_number_get, url_prefix='/api/stu/building')
+    app.register_blueprint(room_floor_get.room_floor_get, url_prefix='/api/stu/building')

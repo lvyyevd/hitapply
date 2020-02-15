@@ -3,10 +3,10 @@
 from flask import Blueprint, jsonify
 from mysql import Room
 
-room_number_get = Blueprint('room_number_get', __name__)
+room_floor_get = Blueprint('room_number_get', __name__)
 
 
-@room_number_get.route('/', methods=['GET'])
+@room_floor_get.route('/', methods=['GET'])
 def room_number_fun():
     room_list = Room.query.all()  # 获取Room表所有教室信息
     # 楼层转换
