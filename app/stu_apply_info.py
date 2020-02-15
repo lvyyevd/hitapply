@@ -92,7 +92,7 @@ def apply_for_stu_POST(record, json_data):
 
 # GET：查看申请详情
 # POST：修改申请信息
-@stu_apply_info.route('/', methods=['GET', 'POST'])
+@stu_apply_info.route('/<string:apply_id>', methods=['GET', 'POST'])
 def apply_for_stu(apply_id):
     # 在数据库中查找此申请记录
     record = Apply.query.get(apply_id)
