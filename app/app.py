@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # 建立MySQL与app的连接
 from const import DatabaseConst
-SQLALCHEMY_DATABASE_URI = 'mysql://{}:{}@{}:{}/{}'.format(DatabaseConst.MYSQL_USERNAME, DatabaseConst.MYSQL_PASSWORD,
+SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://{}:{}@{}:{}/{}'.format(DatabaseConst.MYSQL_USERNAME, DatabaseConst.MYSQL_PASSWORD,
                                                           DatabaseConst.MYSQL_HOST, DatabaseConst.MYSQL_PORT,
                                                           DatabaseConst.MYSQL_DBNAME)
 app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
