@@ -3,6 +3,7 @@ import room_use_info
 import room_info
 import stu_room_use
 import room_floor_get
+import time_get
 
 
 # 注册所有蓝本视图函数
@@ -27,3 +28,7 @@ def register_all(app):
     # http://xx.com/api/stu/building
     # GET: 获取全部楼号
     app.register_blueprint(room_floor_get.room_floor_get, url_prefix='/api/stu/building')
+
+    # http://xx.com/api/stu/timetable
+    # GET: 获取时间表
+    app.register_blueprint(time_get.time_get, url_prefix='/api/stu/timetable')
