@@ -4,6 +4,8 @@ import room_info
 import stu_room_use
 import room_floor_get
 import time_get
+import notice_list
+import notice_info
 
 
 # 注册所有蓝本视图函数
@@ -32,3 +34,15 @@ def register_all(app):
     # http://xx.com/api/stu/timetable
     # GET: 获取时间表
     app.register_blueprint(time_get.time_get, url_prefix='/api/stu/timetable')
+    
+    # http://xx.com/api/stu/apply
+    # POST: 学生提交教室申请
+    app.register_blueprint(stu_apply.stu_apply, url_prefix='/api/stu/apply')
+
+    # http://xx.com/api/stu/notice
+    # GET: 查看公告列表
+    app.register_blueprint(notice_list.notice_list, url_prefix='/api/stu/notice')
+
+    # http://xx.com/api/stu/notice/id
+    # GET: 查看公告详情
+    app.register_blueprint(notice_info.notice_info, url_prefix='/api/stu/notice/<string:notice_id>')
