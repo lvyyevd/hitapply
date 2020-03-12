@@ -8,7 +8,7 @@ notice_list = Blueprint('notice_list', __name__)
 
 def notice_list():
     data = []
-    record = Notice.query.all()
+    record = Notice.query.all().order_by(Notice.time)
 
     if record is None:
         return jsonify(error_code = -102, data = {})
