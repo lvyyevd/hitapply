@@ -45,4 +45,4 @@ def register_all(app):
 
     # http://xx.com/api/stu/notice/id
     # GET: 查看公告详情
-    app.register_blueprint(notice_info.notice_info, url_prefix='/api/stu/notice/<string:notice_id>')
+    app.register_blueprint(notice_info.notice_info, url_prefix='/api/stu/notice/<int:notice_id>')
