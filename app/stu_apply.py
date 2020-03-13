@@ -8,7 +8,7 @@ import datetime
 
 stu_apply = Blueprint('stu_apply', __name__)
 @stu_apply.route('', methods = ['GET','POST'])
-def stu_apply():
+def Stu_Apply():
     if request.method == 'POST':
         json_data = request.get_json(silent=True)
 
