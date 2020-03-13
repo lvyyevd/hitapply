@@ -7,7 +7,7 @@ from common import turn_to_string
 notice_info = Blueprint('notice_info', __name__)
 @notice_info.route('', methods = ['GET'])
 
-def notice_info(notice_id):
+def Notice_Info(notice_id):
     if notice_id == -1:
         length = len(Notice.query.all())
         record = Notice.query.get(length)
