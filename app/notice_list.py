@@ -6,7 +6,7 @@ from common import turn_to_string
 notice_list = Blueprint('notice_list', __name__)
 @notice_list.route('', methods = ['GET'])
 
-def notice_list():
+def Notice_List():
     data = []
     record = Notice.query.all().order_by(Notice.time)
 
