@@ -6,6 +6,7 @@ import room_floor_get
 import time_get
 import notice_list
 import notice_info
+import stu_apply
 
 
 # 注册所有蓝本视图函数
