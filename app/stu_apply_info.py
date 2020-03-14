@@ -57,6 +57,21 @@ def modify_apply_info(record, json_data):
     material = json_data.get('material')  # 修改负责人盖章材料
     if material:
         record.material = material
+    room_name = json_data.get('room_name')   # 修改申请使用的教室号
+    if room_name:
+        record.room_name = room_name
+    org = json_data.get('org')  # 修改负责审核的组织
+    if org:
+        record.org = org
+    applicant_id = json_data.get('applicant_id')    # 修改申请人学号
+    if applicant_id:
+        record.applicant_id = applicant_id
+    applicant_name = json_data.get('applicant_name')    # 修改申请人姓名
+    if applicant_name:
+        record.applicant_name = applicant_name
+    applicant_phone = json_data.get('applicant_phone')  # 修改申请人联系方式
+    if applicant_phone:
+        record.applicant_phone = applicant_phone
 
 
 # 请求方法为POST时
